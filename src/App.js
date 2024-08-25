@@ -13,7 +13,7 @@ function App() {
       </aside>
       <section className="Chatbox">
         <div className="chat-log">
-          {/* ... (chat messages remain unchanged) ... */}
+          {/*changes*/}
           <div className="chat-message">
             <div className="chat-message-center">
               <div className="avatar">
