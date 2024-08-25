@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './normal.css';
 import './App.css';
 
@@ -13,6 +13,7 @@ function App() {
       </aside>
       <section className="Chatbox">
         <div className="chat-log">
+          {/* ... (chat messages remain unchanged) ... */}
           <div className="chat-message">
             <div className="chat-message-center">
               <div className="avatar">
@@ -46,7 +47,29 @@ function App() {
           </div>
         </div>
         <div className="chat-input-holder">
-          <textarea rows="1" className="chat-input-textarea"></textarea>
+          <div className="input-wrapper">
+            <button className="clip-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+              >
+                <path d="M22.95 9.6a1 1 0 0 0-1.414 0L10.644 20.539a5 5 0 1 1-7.072-7.071L14.121 2.876a3 3 0 0 1 4.243 4.242L7.815 17.71a1.022 1.022 0 0 1-1.414 0 1 1 0 0 1 0-1.414l9.392-9.435a1 1 0 0 0-1.414-1.414l-9.392 9.435a3 3 0 0 0 0 4.243 3.073 3.073 0 0 0 4.243 0L19.778 8.532a5 5 0 0 0-7.071-7.07L2.158 12.054a7 7 0 0 0 9.9 9.9L22.95 11.018a1 1 0 0 0 0-1.418Z" />
+              </svg>
+            </button>
+            <textarea rows="1" className="chat-input-textarea" placeholder="Type your message here..."></textarea>
+            <button className="send-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+              >
+                <path d="m17.71 9.88-4.3-4.29a2 2 0 0 0-2.82 0l-4.3 4.29a1 1 0 0 0 0 1.41 1 1 0 0 0 1.42 0L11 8v11a1 1 0 0 0 2 0V8l3.29 3.29a1 1 0 1 0 1.42-1.41Z" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
     </div>

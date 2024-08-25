@@ -2,9 +2,12 @@
   text-align: center;
   display: flex;
   background-color: #282c34;
-  color:white;
+  color: white;
   position: absolute;
-  top:0;bottom:0;right:0;left:0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .sidemenu {
@@ -15,27 +18,22 @@
 
 .side-menu-button {
   padding: 12px;
-  border:1px solid white;
+  border: 1px solid white;
   border-radius: 5px;
   text-align: left;
-  transition:ease 0.25s all; 
-
-
+  transition: ease 0.25s all;
 }
 
 .side-menu-button:hover {
-background-color: rgba(255, 255, 255, 0.1);
-  
-
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .side-menu-button span {
   padding-left: 6px;
   padding-right: 12px;
-
 }
 
-.Chatbox{
+.Chatbox {
   flex: 1;
   background-color: #343541;
   position: relative;
@@ -56,19 +54,20 @@ background-color: rgba(255, 255, 255, 0.1);
   padding: 24px;
   position: absolute;
   bottom: 0;
-  left:0;right: 0;
-
+  left: 0;
+  right: 0;
 }
+
 .chat-input-textarea {
   background-color: #40414f;
-  width: 90%;
-  padding: 12px;
-  border-radius: 5px;
+  width: calc(100% - 80px); /* Adjusted to make room for both buttons */
+  padding: 12px 40px; /* Added left padding for the clip button */
   color: white;
   font-size: 1.25em;
-  border:none;
+  border: none;
   outline: none;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+  border-radius: 5px;
 }
 
 .App-header {
@@ -86,16 +85,24 @@ background-color: rgba(255, 255, 255, 0.1);
   color: #61dafb;
 }
 
+.clip-button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .chat-log {
-  
   text-align: left;
 }
 
 .chat-message.ChatBot {
-
-  background-color: #444654; 
-
+  background-color: #444654;
 }
+
 .chat-message-center {
   max-width: 640px;
   margin-left: auto;
@@ -104,8 +111,6 @@ background-color: rgba(255, 255, 255, 0.1);
   padding: 12px;
   padding-left: 24px;
   padding-right: 24px;
-  
-  
 }
 
 .avatar {
@@ -113,7 +118,6 @@ background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-
 }
 
 .avatar.ChatBot {
@@ -121,12 +125,34 @@ background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-
 }
 
 .message {
   padding-left: 40px;
- padding-right: 40px;
+  padding-right: 40px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.send-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.clip-button svg,
+.send-button svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
 }
 
 @keyframes App-logo-spin {
@@ -137,4 +163,3 @@ background-color: rgba(255, 255, 255, 0.1);
     transform: rotate(360deg);
   }
 }
-
