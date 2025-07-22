@@ -10,12 +10,14 @@ A modern, feature-rich ChatGPT clone built with React, featuring a beautiful UI 
 ## ✨ Features
 
 ### 🎨 **Modern UI/UX**
+
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
 - **Dark/Light Theme**: Toggle between themes with smooth animations
 - **Collapsible Sidebar**: Clean interface with expandable conversation history
 - **Smooth Animations**: Framer Motion powered transitions and interactions
 
 ### 💬 **Advanced Chat Features**
+
 - **Real-time Messaging**: Instant AI responses with typing indicators
 - **Message Regeneration**: Regenerate AI responses with one click
 - **Copy to Clipboard**: Easy copying of any message content
@@ -23,17 +25,20 @@ A modern, feature-rich ChatGPT clone built with React, featuring a beautiful UI 
 - **Auto-resizing Input**: Dynamic textarea that grows with content
 
 ### 🔍 **Smart Management**
+
 - **Conversation Search**: Find any conversation instantly
 - **Conversation Export**: Download chat history as JSON files
 - **Multiple Conversations**: Manage unlimited chat sessions
 - **Auto-save**: All conversations are automatically saved
 
 ### ⌨️ **Keyboard Shortcuts**
+
 - `Ctrl + N`: Start a new conversation
 - `Ctrl + B`: Toggle sidebar visibility
 - `Enter`: Send message (Shift + Enter for new line)
 
 ### 🎯 **Developer Features**
+
 - **Component-based Architecture**: Modular, reusable components
 - **TypeScript Ready**: Easy migration to TypeScript
 - **ESLint Integration**: Code quality and consistency
@@ -46,10 +51,12 @@ Before setting up the project, ensure you have the following installed:
 ### **Required Software:**
 
 1. **Node.js** (v16.0.0 or higher)
+
    - Download from: https://nodejs.org/
    - Verify installation: `node --version`
 
 2. **pnpm** (v8.0.0 or higher) - **Required Package Manager**
+
    ```bash
    npm install -g pnpm
    # Verify installation
@@ -61,6 +68,7 @@ Before setting up the project, ensure you have the following installed:
    - Verify installation: `git --version`
 
 ### **System Requirements:**
+
 - **OS**: Windows 10/11, macOS 10.14+, or Linux
 - **RAM**: 4GB minimum, 8GB recommended
 - **Storage**: 500MB free space
@@ -69,6 +77,7 @@ Before setting up the project, ensure you have the following installed:
 ## 🚀 Installation & Setup
 
 ### **Step 1: Clone the Repository**
+
 ```bash
 # Clone the project
 git clone https://github.com/suhailult777/ai-interface.git
@@ -78,6 +87,7 @@ cd ai-interface
 ```
 
 ### **Step 2: Install Dependencies**
+
 ```bash
 # Install all project dependencies using pnpm
 pnpm install
@@ -93,6 +103,7 @@ pnpm install
 ```
 
 ### **Step 3: Environment Setup**
+
 The project includes pre-configured environment files:
 
 - `.env.local` - Local development settings
@@ -102,6 +113,7 @@ The project includes pre-configured environment files:
 **No additional environment setup required!**
 
 ### **Step 4: Start Development Server**
+
 ```bash
 # Start the development server
 pnpm start
@@ -112,6 +124,7 @@ pnpm start
 ```
 
 The application will automatically open in your browser at:
+
 - **Local**: http://localhost:3000
 - **Network**: http://YOUR_IP:3000
 
@@ -169,23 +182,27 @@ ai-interface/
 ## 🎮 Usage Guide
 
 ### **Starting a New Conversation**
+
 1. Click the "New Chat" button in the sidebar
 2. Or use the keyboard shortcut `Ctrl + N`
 3. Type your message in the input field
 4. Press `Enter` to send (or `Shift + Enter` for new line)
 
 ### **Managing Conversations**
+
 - **Switch Conversations**: Click on any conversation in the sidebar
 - **Delete Conversations**: Hover over a conversation and click the trash icon
 - **Search Conversations**: Use the search bar at the top of the sidebar
 - **Export Conversations**: Click the export button in the header
 
 ### **Message Features**
+
 - **Copy Messages**: Hover over any AI message and click the copy icon
 - **Regenerate Responses**: Click the regenerate button on AI messages
 - **Markdown Support**: Messages support full markdown formatting
 
 ### **Theme & UI**
+
 - **Toggle Theme**: Click the theme toggle button in the header
 - **Collapse Sidebar**: Click the hamburger menu or use `Ctrl + B`
 - **Responsive Design**: Interface adapts to screen size automatically
@@ -195,6 +212,7 @@ ai-interface/
 ### **Available Scripts**
 
 #### **Development**
+
 ```bash
 # Start development server with hot reload
 pnpm start
@@ -207,6 +225,7 @@ pnpm test -- --coverage
 ```
 
 #### **Building**
+
 ```bash
 # Create production build
 pnpm build
@@ -216,6 +235,7 @@ pnpm build && npx serve -s build
 ```
 
 #### **Code Quality**
+
 ```bash
 # Run ESLint
 npx eslint src/
@@ -229,19 +249,20 @@ npx prettier --write src/
 
 ### **Key Technologies**
 
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **React** | 18.3.1 | UI framework |
-| **Tailwind CSS** | Latest | Utility-first styling |
-| **Radix UI** | Latest | Accessible component primitives |
-| **Framer Motion** | 12.23.6 | Animations and transitions |
-| **Lucide React** | 0.525.0 | Beautiful icons |
-| **React Markdown** | 10.1.0 | Markdown rendering |
-| **Class Variance Authority** | 0.7.1 | Component variant management |
+| Technology                   | Version | Purpose                         |
+| ---------------------------- | ------- | ------------------------------- |
+| **React**                    | 18.3.1  | UI framework                    |
+| **Tailwind CSS**             | Latest  | Utility-first styling           |
+| **Radix UI**                 | Latest  | Accessible component primitives |
+| **Framer Motion**            | 12.23.6 | Animations and transitions      |
+| **Lucide React**             | 0.525.0 | Beautiful icons                 |
+| **React Markdown**           | 10.1.0  | Markdown rendering              |
+| **Class Variance Authority** | 0.7.1   | Component variant management    |
 
 ### **Component Architecture**
 
 #### **Theme System**
+
 ```javascript
 // Theme provider wraps the entire app
 <ThemeProvider defaultTheme="dark" storageKey="chatgpt-clone-theme">
@@ -250,11 +271,13 @@ npx prettier --write src/
 ```
 
 #### **State Management**
+
 - Uses React hooks (`useState`, `useEffect`, `useCallback`)
 - Custom hooks for conversation management
 - Local storage for persistence
 
 #### **Styling Approach**
+
 - **Tailwind CSS** for utility-first styling
 - **CSS Variables** for theme switching
 - **Responsive design** with mobile-first approach
@@ -265,6 +288,7 @@ npx prettier --write src/
 ### **Common Issues & Solutions**
 
 #### **Port Already in Use**
+
 ```bash
 # If port 3000 is occupied, the app will automatically use the next available port
 # You can also manually specify a port:
@@ -272,6 +296,7 @@ PORT=3003 pnpm start
 ```
 
 #### **pnpm Installation Issues**
+
 ```bash
 # Clear pnpm cache
 pnpm store prune
@@ -282,6 +307,7 @@ pnpm install
 ```
 
 #### **ESLint Conflicts**
+
 The project is pre-configured to handle ESLint conflicts with pnpm. If you encounter issues:
 
 ```bash
@@ -293,6 +319,7 @@ DISABLE_ESLINT_PLUGIN=true
 ```
 
 #### **Build Fails**
+
 ```bash
 # Clear build cache
 rm -rf build/
@@ -303,6 +330,7 @@ pnpm build
 ```
 
 #### **Theme Not Persisting**
+
 - Check browser local storage permissions
 - Ensure `storageKey` in ThemeProvider is unique
 - Clear browser data and refresh
@@ -310,6 +338,7 @@ pnpm build
 ### **Performance Optimization**
 
 #### **Bundle Size**
+
 ```bash
 # Analyze what's included in your bundle
 npm install -g source-map-explorer
@@ -318,6 +347,7 @@ npx source-map-explorer 'build/static/js/*.js'
 ```
 
 #### **Memory Usage**
+
 - Conversations are stored in memory and local storage
 - Large conversation histories may impact performance
 - Consider implementing pagination for production use
@@ -325,6 +355,7 @@ npx source-map-explorer 'build/static/js/*.js'
 ## 🌐 Deployment
 
 ### **Build for Production**
+
 ```bash
 # Create optimized production build
 pnpm build
@@ -338,15 +369,18 @@ pnpm build
 ### **Deployment Options**
 
 #### **Vercel** (Recommended)
+
 1. Connect your GitHub repository to Vercel
 2. Vercel will automatically detect React and configure build settings
 3. Deploy with zero configuration
 
 #### **Netlify**
+
 1. Drag and drop the `build` folder to Netlify
 2. Or connect your GitHub repository for continuous deployment
 
 #### **Traditional Hosting**
+
 ```bash
 # Build the project
 pnpm build
@@ -356,6 +390,7 @@ pnpm build
 ```
 
 #### **Docker**
+
 ```dockerfile
 # Dockerfile example
 FROM node:18-alpine
@@ -371,6 +406,7 @@ CMD ["npx", "serve", "-s", "build"]
 ## 🤝 Contributing
 
 ### **How to Contribute**
+
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
 3. Make your changes
@@ -380,6 +416,7 @@ CMD ["npx", "serve", "-s", "build"]
 7. Open a Pull Request
 
 ### **Development Guidelines**
+
 - Follow existing code style and patterns
 - Add tests for new features
 - Update documentation for significant changes
@@ -387,6 +424,7 @@ CMD ["npx", "serve", "-s", "build"]
 - Keep components small and focused
 
 ### **Code Style**
+
 - Use functional components with hooks
 - Prefer arrow functions for inline functions
 - Use TypeScript-style prop definitions in comments
@@ -416,6 +454,7 @@ If you encounter any issues or have questions:
 ## 🔄 Updates
 
 ### **Latest Version: 1.0.0**
+
 - ✅ Full ChatGPT UI clone
 - ✅ Dark/light theme support
 - ✅ Conversation management
@@ -429,7 +468,7 @@ If you encounter any issues or have questions:
 
 **Happy Coding! 🚀**
 
-*Built with ❤️ using React, Tailwind CSS, and modern web technologies.*
+_Built with ❤️ using React, Tailwind CSS, and modern web technologies._
 
 ### Analyzing the Bundle Size
 
