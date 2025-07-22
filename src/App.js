@@ -59,7 +59,7 @@ function App() {
 
     // Add user message to current conversation
     const updatedMessages = [...(currentConversation?.messages || []), userMessage];
-    
+
     if (currentConversation) {
       updateConversation(currentConversation.id, {
         messages: updatedMessages,
@@ -74,10 +74,10 @@ function App() {
     try {
       // Get AI response
       const aiMessage = await mockChatAPI.sendMessage(input);
-      
+
       // Add AI message to conversation
       const finalMessages = [...updatedMessages, aiMessage];
-      
+
       if (currentConversation) {
         updateConversation(currentConversation.id, {
           messages: finalMessages,
@@ -116,7 +116,7 @@ function App() {
 
     // Add user message to current conversation
     const updatedMessages = [...(currentConversation?.messages || []), userMessage];
-    
+
     if (currentConversation) {
       updateConversation(currentConversation.id, {
         messages: updatedMessages,
@@ -130,7 +130,7 @@ function App() {
     // Get AI response
     mockChatAPI.sendMessage(message.content).then(aiMessage => {
       const finalMessages = [...updatedMessages, aiMessage];
-      
+
       if (currentConversation) {
         updateConversation(currentConversation.id, {
           messages: finalMessages,
@@ -152,25 +152,25 @@ function App() {
 
   const handleRegenerate = (messageIndex) => {
     if (!currentConversation || !currentConversation.messages) return;
-    
+
     const messages = currentConversation.messages;
     const userMessage = messages[messageIndex - 1]; // Get the user message before the AI message
-    
+
     if (!userMessage || userMessage.role !== 'user') return;
-    
+
     // Remove the AI message we're regenerating
     const updatedMessages = messages.slice(0, messageIndex);
-    
+
     updateConversation(currentConversation.id, {
       messages: updatedMessages,
     });
-    
+
     setIsGenerating(true);
-    
+
     // Get new AI response
     mockChatAPI.sendMessage(userMessage.content).then(aiMessage => {
       const finalMessages = [...updatedMessages, aiMessage];
-      
+
       updateConversation(currentConversation.id, {
         messages: finalMessages,
       });
