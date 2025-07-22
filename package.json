@@ -3,12 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-slot": "^1.2.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "ai": "^4.3.19",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.6",
+    "lucide-react": "^0.525.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
     "react-scripts": "5.0.1",
+    "remark-gfm": "^4.0.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -16,12 +27,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
